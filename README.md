@@ -1,3 +1,3 @@
-# reminder_me
+# reminde_me
 
 A new Flutter project.
