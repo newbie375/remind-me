@@ -1,5 +1,36 @@
 import 'package:flutter/material.dart';
-import 'package:reminder_me/presentation/widgets/shared/custom_bottom_navigation.dart';
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Center(child: Text('Reminders')),
+      ),
+      body: Center(
+        // Ensures content is centered in the body
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, // Centers the text vertically
+          children: [
+            const Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Text(
+                'There are no reminders created yet.',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16),
+                softWrap: true,
+                overflow: TextOverflow.visible,
+              ),
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: const FloatingButton(), // Use the custom FloatingButton
+    );
+  }
+}
 
 class FloatingButton extends StatelessWidget {
   const FloatingButton({super.key});
@@ -32,42 +63,6 @@ class FloatingButton extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Center(child: const Text('Reminders')),
-      ),
-      body: Center(
-        // Ensures content is centered in the body
-        child: Column(
-          mainAxisAlignment:
-              MainAxisAlignment.center, // Centers the text vertically
-          children: [
-            const Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Text(
-                'There are no reminders created yet.',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16),
-                softWrap: true,
-                overflow: TextOverflow.visible,
-              ),
-            ),
-          ],
-        ),
-      ),
-      bottomNavigationBar: CustomBottomNavigation(
-          currentIndex: 0), // Use the custom bottom navigation
-      floatingActionButton:
-          const FloatingButton(), // Use the custom FloatingButton
     );
   }
 }

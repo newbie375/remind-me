@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:reminder_me/presentation/widgets/shared/custom_bottom_navigation.dart';
 import 'package:reminder_me/presentation/providers/theme_provider.dart';
 
 class SettingsPage extends ConsumerWidget {
@@ -62,7 +61,6 @@ class SettingsPage extends ConsumerWidget {
           ],
         ),
       ),
-      bottomNavigationBar: CustomBottomNavigation(currentIndex: 1),  // Set current index to 1 (Settings page)
     );
   }
 }
