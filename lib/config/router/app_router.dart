@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
 
-import 'package:reminder_me/presentation/pages/home_page.dart';
-import 'package:reminder_me/presentation/pages/settings_page.dart';
+import 'package:reminder_me/presentation/screens/home_screen.dart';
+import 'package:reminder_me/presentation/screens/settings_screen.dart';
 
 final GoRouter router = GoRouter(
     initialLocation: '/',

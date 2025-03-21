@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reminder_me/presentation/widgets/shared/custom_buttom_navigation.dart';
+import 'package:reminder_me/presentation/widgets/shared/custom_bottom_navigation.dart';
 
 class FloatingButton extends StatelessWidget {
   const FloatingButton({super.key});
@@ -17,7 +17,7 @@ class FloatingButton extends StatelessWidget {
           mainAxisSize: MainAxisSize.min, // Ensures the Card adjusts to content
           children: [
             const Text(
-              'Create a new notification',
+              'Create a reminder', // Text to display
               style: TextStyle(fontSize: 16), // Customize text style
             ),
             const SizedBox(width: 12), // Spacing between text and button
@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: const Text('Notifications')),
+        title: Center(child: const Text('Reminders')),
       ),
       body: Center(
         // Ensures content is centered in the body
@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.all(16.0),
               child: Text(
-                'There are no notifications created yet.',
+                'There are no reminders created yet.',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16),
                 softWrap: true,
